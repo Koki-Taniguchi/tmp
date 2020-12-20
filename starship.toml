@@ -1,0 +1,44 @@
+# Disable the newline at the start of the prompt
+add_newline = false
+
+# Wait 10 milliseconds for starship to check files under the current directory.
+scan_timeout = 10
+
+[battery]
+full_symbol = "🔋"
+charging_symbol = "⚡️"
+discharging_symbol = "💀"
+
+# バッテリー残量が0％〜10％の間は「太字の赤色」スタイルを利用する
+[[battery.display]]
+threshold = 10
+style = "bold red"
+
+# バッテリー残量が10％〜30％の間は「太字の黄色」スタイルを利用する
+[[battery.display]]
+threshold = 30
+style = "bold yellow"
+
+# git
+[git_branch]
+symbol = " "
+truncation_length = 15
+truncation_symbol = "..."
+
+[git_commit]
+disabled = false
+commit_hash_length = 4
+
+# golang
+[golang]
+format = "[via  $version ](bold cyan)"
+
+# dart
+[dart]
+format = "[via  $version ](bold cyan)"
+
+# directory
+[directory]
+format = "[ $path ](bold cyan)"
+truncation_length = 10
+truncation_symbol = "…/"
